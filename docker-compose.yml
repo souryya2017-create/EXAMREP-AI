@@ -1,0 +1,18 @@
+services:
+  examprep-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: examprep-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_DEFAULT_MODEL=qwen2.5:3b
+      - APP_ENV=production
+      - DEBUG=false
+    volumes:
+      - ./data:/app/data
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    restart: unless-stopped

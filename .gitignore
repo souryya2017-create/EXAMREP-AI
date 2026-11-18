@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C / C++ compiled binaries and objects
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.so
+*.dylib
+*.dll
+
+# Sandboxes & Temp Execution Directories
+examprep_sandbox_*
+cli_sandbox_*
+eval_sandbox_*
+compile_check_*
+
+# Environment & Credentials
+.env
+.venv/
+venv/
+ENV/
+env/
+
+# SQLite databases
+*.db
+*.sqlite3
+data/*.db
+
+# Vector store & document uploads
+data/chroma/
+data/uploads/*
+!data/uploads/.gitkeep
+
+# Logs
+logs/
+*.log
+
+# Pytest & testing artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Editor / OS settings
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
